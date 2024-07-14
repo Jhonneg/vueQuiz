@@ -1,4 +1,6 @@
-export const data = {
+export const questionsData = {
+  questionsAnswered: 0,
+  totalCorrect: 0,
   questions: [
     {
       q: "In what year Vue came out?",
