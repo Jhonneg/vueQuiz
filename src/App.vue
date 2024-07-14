@@ -1,30 +1,66 @@
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      questions: [
+        {
+          q: "In what year Vue came out?",
+          answers: [
+            { text: "2016", is_correct: false },
+            { text: "2013", is_correct: false },
+            { text: "2014", is_correct: true },
+            { text: "2015", is_correct: false },
+          ],
+        },
+        {
+          q: "In what year Javascript came out?",
+          answers: [
+            { text: "1994", is_correct: false },
+            { text: "1995", is_correct: true },
+            { text: "1998", is_correct: false },
+            { text: "1996", is_correct: false },
+          ],
+        },
+        {
+          q: "What is Nuxt?",
+          answers: [
+            {
+              text: "A framework for vue for building fullstack applications.",
+              is_correct: true,
+            },
+            {
+              text: "A component library.",
+              is_correct: false,
+            },
+            {
+              text: "A database integration library for Vue3",
+              is_correct: false,
+            },
+          ],
+        },
+      ],
+      results: [
+        {
+          min: 0,
+          max: 2,
+          title: "Try again!",
+          desc: "Do a little more studying and you may succeed!",
+        },
+        {
+          min: 3,
+          max: 3,
+          title: "Wow, you're a genius!",
+          desc: "Studying has definitely paid off for you!",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <template>
   <div class="ctr">
-    <div class="questions-ctr">
-      <div class="progress">
-        <div class="bar"></div>
-        <div class="status">1 out of 3 questions answered</div>
-      </div>
-      <div class="single-question">
-        <div class="question">Sample Question</div>
-        <div class="answers">
-          <div class="answer">Sample Answer 1</div>
-          <div class="answer">Sample Answer 2</div>
-          <div class="answer">Sample Answer 3</div>
-          <div class="answer">Sample Answer 4</div>
-        </div>
-      </div>
-    </div>
-    <div class="result">
-      <div class="title">You got sample result 1!</div>
-      <div class="desc">Enter a short description here about the result.</div>
-    </div>
     <button type="button" class="reset-btn">Reset</button>
   </div>
 </template>
