@@ -1,6 +1,6 @@
 # Vue Quiz App
 
-Built with 
+Built with a
 
 [![Current tech stack](https://skillicons.dev/icons?i=vue,vite)](https://skillicons.dev)
 
